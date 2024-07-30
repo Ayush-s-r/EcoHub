@@ -142,7 +142,7 @@ hyphen{
 
 .learn-more{
     position: relative;
-    left: 13rem;
+    left: 10rem;
     top: 1.5rem;
     
     
@@ -196,7 +196,7 @@ hyphen{
 
 .slider-nav-container{
     width: 100%;
-    height: 50vh;
+    height: 56vh;
     z-index: 2;
     position: relative;
     bottom: 17.5rem;
@@ -209,7 +209,7 @@ hyphen{
 
 
 .cards-div{
-    width: 100%;
+    width: 60vw;
     height: 37.5vh;
     z-index: 2;
     display: flex;
@@ -236,9 +236,9 @@ hyphen{
 
 
 
-.slide-nav-button{
+.slide-count-nav-container{
     height: 65px;
-    width: 52vw;
+    width: 47vw;
     margin: 1.5rem 1.25rem 0px 0px;
     display: flex;
     justify-content: space-between;
@@ -246,22 +246,24 @@ hyphen{
 
 }
 
-.snav{
+.snav-button-div{
+    width: 12vw;
+    height: 65px;
     display: flex;
     align-items: center;
 }
 
-.slider-nav{
+.slider-nav-button{
 
     width: 4rem;
     height: 65px;
     background-color: transparent;
     border-radius: 50%;
-    margin: 0px 10px 0px 0px;
     font-size: 2rem;
     color: #9DB2BF;
     border: 3px solid #9db2bf63;
-
+    margin-right: 10px;
+    
 }
 
 .counter{
@@ -282,7 +284,7 @@ margin-bottom: 1rem;
 
 hr{
     border: 1px solid  rgba(253, 253, 253, 0.484);
-    width: 45vw;
+    width: 40vw;
 }
 
 
@@ -384,7 +386,7 @@ hr{
     font-size: 1.3rem;
 }
 
-button {
+.slider-container button {
     position: relative;
     top: px;
     left: -50px; /* Position the button to be visible */
