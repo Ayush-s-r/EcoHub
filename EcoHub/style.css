@@ -208,31 +208,50 @@ hyphen{
 }
 
 
+
+cards-main-container{
+    width: 65vw;
+    height: 43vh;
+    overflow: hidden;
+
+
+}
+
 .cards-div{
-    width: 60vw;
-    height: 37.5vh;
-    z-index: 2;
+    width: 65vw;
+    height: 43vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: end;
+    overflow: hidden;
 
 }
 
 .card{
 
-    width: 12vw;
-    height: 37.5vh;
+    width: 11vw;
+    height: 36vh;
     background-color: aqua;
     border-radius: 0.8rem;
-    margin: 0px 1.25rem 0px 0rem;
+    margin: 0px 1rem 0px 0rem;
     box-shadow: gray;
     background-image: url(card-bg-1.jpg);
     background-size: cover;
     background-position: center;
     box-shadow: 3px 3px 4px rgb(75, 70, 70) ;
     border: none;
+    position: relative;
+    animation-name: cardscroll;
 
 }
+
+.card:hover{
+    scale: 1.06;
+    transition: 1s ease-in-out;
+}
+
+
 
 
 

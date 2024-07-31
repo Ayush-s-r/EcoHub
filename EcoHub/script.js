@@ -5,6 +5,12 @@ divid.forEach( card => {
         count.textContent = `${card.id}`;
     })
 })
+
+divid.forEach( card => {
+    card.addEventListener('mouseover', () => {
+        count.textContent = `${card.id}`;
+    })
+})
 var slider1 = document.getElementById('slider1');
 var tbIcon1 = document.querySelector('#tbIcon1');
 
