@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Discussion Forum1</title>
+ <link rel="stylesheet" href="blog.css">
+ </head>
+ <body>
+ <div class="container">
+ <header>
+ <h1>Discussion Forum</h1>
+ </header>
+ <main>
+ <section class="post-form">
+ <h2>New Post</h2>
+ <form id="postForm">
+ <input type="text" id="userName" placeholder="Your Name" required>
+ <input type="text" id="postTitle" placeholder="Title" required>
+ <textarea id="postContent" placeholder="Write your post here..."
+ required></textarea>
+ <button type="submit">Post</button>
+ </form>
+ </section>
+ <section class="posts" id="postsSection">
+ <!-- Example posts; these would normally be dynamically loaded-->
+ <article class="post">
+ <h3>Great Work!</h3>
+ <p><strong>divendra85:</strong> Divendra kumar </p>
+ <p>Such a wonderful way to educate about sustainable living.</p>
+ <div class="replies">
+ <div class="reply">
+ <p><strong>lky4444:</strong> replied to <strong>divendra85:</strong> </p>
+ i agree </p>
+ </div>
+ </div>
+ </article>
+ <article class="post">
+ <h3>Keep Going</h3>
+ <p><strong>puravsaini12:</strong> purav</p>
+ <p>really appreaiciate what you guys are doing<p>
+ <div class="replies">
+ <div class="reply">
+<p><strong>deepak:</strong>replies to <strong>puravsaini12:</strong></p> right</p>
+ </div>
+ </div>
+ </article>
+ <!-- User's own posts will appear here after form submission-->
+ </section>
+ </main>
+ <footer>
+ <p>&copy; 2024 Discussion Forum</p>
+ </footer>
+ </div>
+ <script src="discussion.js"></script>
+ </body>
+ </html

@@ -4,8 +4,13 @@
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(23, 20, 20, 0.893);
     overflow-x: hidden;
 }
@@ -68,14 +73,21 @@ body{
 }
 
 
+main{
+    width: 100%;
+    height: calc(100% - 8vh);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .left-hero-div{
     position: relative;
+    margin: 0vw 0vw 0vw 5vw;
     animation-name: left-to-right;
     animation-duration: 2s;
     animation-timing-function: ease-out;
 }
-
-
 
 
 @keyframes left-to-right {
@@ -90,23 +102,11 @@ body{
     }
     
 }
-hyphen{
-
-    width: 2rem;
-    height: 0.25rem;
-    background-color: #cbc9c9;
-    position: relative;
-    left: 5.2vw;
-    top: 30vh
-    
-}
-
 
 .welcome-text p{
     color: #cbc9c9;
+    text-shadow: -2px 2px 4px black, 0px -3px 1.5px rgb(251, 222, 78);
     font-size: 4rem;
-    position: relative;
-    margin: 30vh 0vh 1.5vh 9.5vh;
     font-weight: bolder;
     font-family: monospace;
 }
@@ -119,47 +119,43 @@ hyphen{
     font-size: 1.5rem;
     font-weight: bolder;
     word-spacing: 5px;
-    margin: 0vh 0vh 0vh 9.5vh;
+    
 
+}
+
+.learn-more-container{
+    width: calc(var(--left-hero-div-width)/2);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    margin: 1.3rem 0rem 0rem 1.7rem;
 }
 
 .bulb{
     width: 40px;
     height: 40px;
-    background-color: #ffb22c;
-    display: grid;
-    padding-top: 8.5px ;
-    justify-content: center;
     border-radius: 50%;
-    font-size: larger;
-    position: relative;
-    bottom: 1.1rem;
-    left: 6.2rem;
-
-
+    background-image: url(bulb.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0rem 1rem 0rem 0rem;
+   
 }
 
 
-.learn-more{
-    position: relative;
-    left: 10rem;
-    top: 1.5rem;
-    
-    
-}
 
-.learn-more button{
+.learn-more-button {
     font-size: 1rem;
     color: #9DB2BF;
     width: 9vw;
-    height: 6vh;
+    height: 5.85vh;
     border-radius: 1.8rem;
     background-color: transparent;
     border: 2px solid #9db2bf1b;
     
 }
 
-.learn-more button i{
+.learn-more-button i{
 
     margin-left: 5px;
     
@@ -169,17 +165,16 @@ hyphen{
 
 
 .right-hero-div{
-    position: relative;
+    width: calc(100% - var(--left-hero-div-width));
+    height: 100%;
+    display: flex;
+    align-items: end;
     animation-name: fade-in;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-
     animation-name: right-to-left;
     animation-duration: 2s;
     animation-timing-function: ease-out;
-
-
-
 }
 
 @keyframes right-to-left {
@@ -194,30 +189,19 @@ hyphen{
     
 }
 
-.slider-nav-container{
-    width: 100%;
+.slider-and-nav-container{
+    width: 65vw;
     height: 56vh;
-    z-index: 2;
-    position: relative;
-    bottom: 17.5rem;
     display: flex;
     flex-direction: column;
     align-items: end;
-
-
+    margin: 0rem 3.5rem 5rem 0rem;
+    
 }
 
 
 
-cards-main-container{
-    width: 65vw;
-    height: 43vh;
-    overflow: hidden;
-
-
-}
-
-.cards-div{
+.cards-container{
     width: 65vw;
     height: 43vh;
     display: flex;
@@ -230,34 +214,54 @@ cards-main-container{
 
 .card{
 
-    width: 11vw;
-    height: 36vh;
-    background-color: aqua;
+    width: 10vw;
+    height: 35vh;
     border-radius: 0.8rem;
-    margin: 0px 1rem 0px 0rem;
-    box-shadow: gray;
-    background-image: url(card-bg-1.jpg);
+    margin: 0px 1.5rem 0px 0rem;
     background-size: cover;
     background-position: center;
-    box-shadow: 3px 3px 4px rgb(75, 70, 70) ;
-    border: none;
-    position: relative;
-    animation-name: cardscroll;
+    box-shadow: 3px 3px 7px rgb(26, 23, 23) ;
+    padding: 1rem 0.7rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    font-size: 0.9rem;
+    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+
+
+.card h3{
+   
+    justify-self: center;
+    font-weight: 900; 
+    font-family: monospace;
+}
+
+.card p{
+    font-weight: 500;
 }
 
 .card:hover{
     scale: 1.06;
-    transition: 1s ease-in-out;
+
 }
 
+.card1{ background-image: url(card-bg-1.jpg);}
+.card2{ background-image: url(card-bg-2.jpg);}
+.card3{ background-image: url(card-bg-3.jpeg);}
+.card4{ background-image: url(card-bg-4.jpg);}
+.card5{ background-image: url(card-bg-5.jpg);}
 
 
 
 
-.slide-count-nav-container{
+.slide-count-container{
     height: 65px;
-    width: 47vw;
+    width: 56vw;
     margin: 1.5rem 1.25rem 0px 0px;
     display: flex;
     justify-content: space-between;
@@ -265,24 +269,10 @@ cards-main-container{
 
 }
 
-.snav-button-div{
-    width: 12vw;
-    height: 65px;
-    display: flex;
-    align-items: center;
-}
 
-.slider-nav-button{
-
-    width: 4rem;
-    height: 65px;
-    background-color: transparent;
-    border-radius: 50%;
-    font-size: 2rem;
-    color: #9DB2BF;
-    border: 3px solid #9db2bf63;
-    margin-right: 10px;
-    
+.hr{
+    border: 1px solid  rgba(253, 253, 253, 0.484);
+    width: 51vw;
 }
 
 .counter{
@@ -301,10 +291,7 @@ cards-main-container{
 margin-bottom: 1rem;
 }
 
-hr{
-    border: 1px solid  rgba(253, 253, 253, 0.484);
-    width: 40vw;
-}
+
 
 
 
@@ -325,7 +312,7 @@ hr{
     margin: 0.7rem 0rem;
     display: flex;
     justify-content: space-between;
-    background-image: url(heron-image.jpg);
+    background-image: url(intro-bg.jpg);
     background-size: cover;
     
     
@@ -335,18 +322,18 @@ hr{
     width: 40vw;
     height: 100vh;
     padding: 2rem 2rem;
+    text-shadow: 2px 2px 5px black;
 }
 
-.h4{
-    font-size: 1.3rem;
+.intro-left h4{
+    font-size: 1.5rem;
     color: #9DB;
-    margin-bottom: 4rem;
+    margin: 2.5rem 0rem 3rem 0rem;
 
 }
-.p1-content p{
+.intro-left p{
     font-size: 1.4rem;
-    word-spacing: 4px;
-    color: #9DB2BF;
+    color: #acd6f0;
     word-spacing: 3px; 
      
   
@@ -356,19 +343,15 @@ hr{
     width: 53vw;
     height: 60vh;
     position: relative;
-    top: 10vh;
+    
     
 }
-/* 
-#slider1{
-    position: relative;
-    left: 40vw;
-} */
+
 
 .slider-container1 {
     position: relative;
     top: 0;
-    left: 52.1vw; /* Hide the slider to the right */
+    left: 52.1vw; 
     width: 53vw;
     height: 100%;
     background-color: #33323392;
@@ -405,18 +388,15 @@ hr{
 }
 
 .slider-container button {
-    position: relative;
-    top: px;
-    left: -50px; /* Position the button to be visible */
-    width: 50px;
-    height: 50px;
-    background-color: #333;
-    color: white;
-    border: none;
+    
+    border: 1px solid rgba(169, 169, 169, 0.663) ;
+    border-right: none;
+    border-radius: 1rem 0rem 0rem 1rem;
     cursor: pointer;
     font-size: 2rem;
     text-align: start;
     padding-left: 1rem;
+    box-shadow: -2px 2px 4px rgb(111, 76, 31) ;
 }
 
 #toggleButton1{
@@ -426,8 +406,7 @@ hr{
     width: 9vw;
     height: 40vh;
     background-color: #d09f5f;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    
 }
 
 #toggleButton2{
@@ -437,8 +416,7 @@ hr{
     width: 4.5vw;
     height: 40vh;
     background-color: #cfb28c;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+  
     
 }
 
