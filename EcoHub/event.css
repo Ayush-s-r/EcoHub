@@ -1,0 +1,97 @@
+body {
+
+    padding-top: 10vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-image: url('event-bg.jpg');
+    background-size: cover;
+    color: #e0d058;
+   
+
+}
+body h2{
+    font-size: 3rem;
+    margin-bottom: 12vh;
+}
+
+.accordion{
+    width: 80vw;
+    height: 100%;
+    background-color: #b0bd4f71;
+    color: rgb(230, 232, 210);
+    
+}
+
+.accordion-content a{
+    color: #c2ecf4;
+}
+
+.accordion-button {
+    flex-grow: 1;
+    background-color: #f1f1f190;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.5rem;
+    text-align: left;
+    width: 100%;
+    height: 10vh;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    color: #6c6d57;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus-sign{
+    margin-right: 1rem;
+    font-size: 2.5rem;
+    
+    
+}
+
+.cross-sign{
+    transform: rotate(45deg);
+}
+
+
+
+.accordion-button:hover{
+    color: #43443e;
+}
+
+.accordion-button.active, .accordion-button:hover {
+    background-color: #cccccc63;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px 30px;
+    border-top: none;
+}
+
+.quiz{
+    background-color: rgb(214, 193, 140);
+    font-size: 1.2rem;
+    color: black;
+    margin: 3rem ;
+    border-radius: 2rem;
+    padding: 12px;
+    
+}
+
+.quiz a{
+    margin: 0rem 0rem 0rem 9rem;
+    color: #2d5f68;
+    text-decoration: none;
+}
+
+.quiz a:hover{
+    text-decoration: underline;
+}
